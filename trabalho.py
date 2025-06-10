@@ -76,14 +76,14 @@ st.write(f"Encontrados {len(alertas)} gastos acima do limite definido.")
 st.dataframe(alertas)
 
 
-st.subheader("📊 Gráfico de Pizza: Gastos por Categoria")
+st.subheader("📊 Gastos por Categoria:")
 fig1, ax1 = plt.subplots()
 ax1.pie(gastos_categoria, labels=gastos_categoria.index, autopct="%1.1f%%", startangle=90)
 ax1.axis("equal")
 st.pyplot(fig1)
 
 
-st.subheader("📈 Gráfico de Barras: Gastos Semanais")
+st.subheader("📈 Gastos Semanais:")
 gastos_semanais = df.groupby("Semana")["Valor"].sum()
 fig2, ax2 = plt.subplots()
 gastos_semanais.plot(kind="bar", ax=ax2)
