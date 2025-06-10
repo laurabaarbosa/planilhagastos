@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 from collections import defaultdict
 import random
 import io
-!pip install matplotlib
+
 
 
 st.title("📊 Análise de Despesas Pessoais")
